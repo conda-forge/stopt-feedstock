@@ -10,7 +10,7 @@ source:
   sha256: 92314f7a6e9834b0de6939ac664e4a913c45b38477cf41c3bd431c9f5972fb99
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('stopt') }}
 
@@ -48,6 +48,9 @@ test:
     - test -f $PREFIX/lib/libgeners.dylib  # [osx]
     - if not exist "%PREFIX%\\Library\\lib\\StOpt.lib" exit 1  # [win]
     - if not exist "%PREFIX%\\Library\\lib\\geners.lib" exit 1  # [win]
+    - strings %LIBRARY_LIB%\\libCoinUtils.lib | findstr /C:"RuntimeLibrary=MD"  # [win]
+  requires:
+    - binutils  # [win]
 
 about:
   home: https://gitlab.com/stochastic-control/StOpt
