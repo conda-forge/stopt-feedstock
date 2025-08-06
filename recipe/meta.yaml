@@ -10,7 +10,7 @@ source:
   sha256: 92314f7a6e9834b0de6939ac664e4a913c45b38477cf41c3bd431c9f5972fb99
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage('stopt') }}
 
@@ -20,7 +20,7 @@ requirements:
     - {{ stdlib('c') }}
     - cmake >=3.15
     - _openmp_mutex  # [linux]
-    - llvm-openmp  # [osx]
+    - llvm-openmp  # [osx or win]
     - make
     - pkgconfig  # [unix]
     - ninja  # [win]
@@ -30,7 +30,7 @@ requirements:
     - mpich  # [unix]
     - msmpi  # [win]
     - _openmp_mutex  # [linux]
-    - llvm-openmp  # [osx]
+    - llvm-openmp  # [osx or win]
     - eigen
     - coin-or-utils
     - coin-or-clp
@@ -48,7 +48,7 @@ test:
     - test -f $PREFIX/lib/libgeners.dylib  # [osx]
     - if not exist "%PREFIX%\\Library\\lib\\StOpt.lib" exit 1  # [win]
     - if not exist "%PREFIX%\\Library\\lib\\geners.lib" exit 1  # [win]
-    - strings %LIBRARY_LIB%\\libCoinUtils.lib | findstr /C:"RuntimeLibrary=MD"  # [win]
+    - strings %LIBRARY_LIB%\\StOpt.lib | findstr /C:"RuntimeLibrary=MD"  # [win]
   requires:
     - binutils  # [win]
 
