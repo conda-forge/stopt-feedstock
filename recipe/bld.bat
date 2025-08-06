@@ -5,6 +5,7 @@ cmake %CMAKE_ARGS% ^
     -DBUILD_TEST=OFF ^
     -DCMAKE_MSVC_RUNTIME_LIBRARY="MultiThreadedDLL" ^
     -DOpenMP_RUNTIME_MSVC="llvm" ^
+    -DBUILD_SHARED_LIBS=ON ^
     ..
 cmake --build . --config Release -j%CPU_COUNT%
 
