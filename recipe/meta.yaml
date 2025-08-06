@@ -50,6 +50,7 @@ test:
     - if not exist "%PREFIX%\\Library\\lib\\geners.lib" exit 1  # [win]
     - strings %LIBRARY_LIB%\\StOpt.lib | findstr /C:"RuntimeLibrary=MD"  # [win]
     - strings %LIBRARY_LIB%\\StOpt.lib | findstr /C:"OpenMP"  # [win]
+    - strings %LIBRARY_LIB%\\StOpt.lib | findstr /C:"*.lib"  # [win]
   requires:
     - binutils  # [win]
 
