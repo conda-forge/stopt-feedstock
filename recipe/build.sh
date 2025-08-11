@@ -2,7 +2,7 @@
 
 mkdir build
 cd build
-cmake ${CMAKE_ARGS} -DBUILD_PYTHON=OFF -DBUILD_TEST=OFF ..
+cmake ${CMAKE_ARGS} -DBUILD_PYTHON=OFF -DBUILD_TEST=OFF -DBUILD_SHARED_LIBS=ON ..
 cmake --build . --config Release -j ${CPU_COUNT}
 
 ctest -R MyTestForGlobal
