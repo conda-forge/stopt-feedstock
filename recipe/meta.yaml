@@ -29,8 +29,7 @@ requirements:
     - libboost-mpi
     - mpich  # [unix]
     - msmpi  # [win]
-    - _openmp_mutex  # [linux]
-    - llvm-openmp  # [osx or win]
+    - pthreads-win32  # [win]
     - eigen
     - coin-or-utils
     - coin-or-clp
