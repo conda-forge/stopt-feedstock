@@ -1,5 +1,5 @@
 {% set name = "stopt" %}
-{% set version = "5.15" %}
+{% set version = "5.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.com/stochastic-control/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 92314f7a6e9834b0de6939ac664e4a913c45b38477cf41c3bd431c9f5972fb99
+  sha256: cd60ad02786cd5e0702fff4ca024e5e6b3619deedb1e22135ed82f4960534a59
 
 build:
-  number: 3
+  number: 0
   run_exports:
     - {{ pin_subpackage('stopt') }}
 
