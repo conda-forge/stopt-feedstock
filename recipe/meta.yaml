@@ -27,8 +27,7 @@ requirements:
   host:
     - libboost-headers
     - libboost-mpi
-    - mpich  # [unix]
-    - msmpi  # [win]
+    - {{ mpi }}
     - _openmp_mutex  # [linux]
     - llvm-openmp  # [osx or win]
     - eigen
