@@ -25,7 +25,6 @@ requirements:
     - pkgconfig  # [unix]
     - ninja  # [win]
   host:
-    - libboost-headers
     - libboost-mpi
     - {{ mpi }}
     - _openmp_mutex  # [linux]
