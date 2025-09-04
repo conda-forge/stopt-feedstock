@@ -10,7 +10,7 @@ source:
   sha256: cd60ad02786cd5e0702fff4ca024e5e6b3619deedb1e22135ed82f4960534a59
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('stopt') }}
 
@@ -27,8 +27,7 @@ requirements:
   host:
     - libboost-headers
     - libboost-mpi
-    - mpich  # [unix]
-    - msmpi  # [win]
+    - {{ mpi }}
     - _openmp_mutex  # [linux]
     - llvm-openmp  # [osx or win]
     - eigen

@@ -16,6 +16,12 @@ cxx_compiler:
 - vs2022
 libboost_headers:
 - '1.88'
+mpi:
+- msmpi
+mpich:
+- '4'
+openmpi:
+- '4'
 target_platform:
 - win-64
 zlib:
