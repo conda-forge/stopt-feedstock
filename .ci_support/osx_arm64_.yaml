@@ -22,7 +22,7 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '19'
-libboost_headers:
+libboost_devel:
 - '1.88'
 llvm_openmp:
 - '19'
