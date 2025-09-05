@@ -14,7 +14,7 @@ coin_or_utils:
 - '2.11'
 cxx_compiler:
 - vs2022
-libboost_headers:
+libboost_devel:
 - '1.88'
 mpi:
 - msmpi
