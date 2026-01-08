@@ -1,6 +1,3 @@
 mpi:
   - mpich    # [unix]
   - msmpi    # [win64]
-openmp:
-  - llvm-openmp  # [osx or win]
-  - intel-openmp  # [win]
