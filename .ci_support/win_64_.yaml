@@ -19,7 +19,7 @@ libboost_devel:
 mpi:
 - msmpi
 mpich:
-- '4'
+- '5'
 openmpi:
 - '4'
 target_platform:
