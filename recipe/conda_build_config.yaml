@@ -3,3 +3,5 @@ mpi:
   - msmpi    # [win64]
 libboost_devel:  
   - 1.88
+llvm_openmp:
+  - '19'  # [osx]
