@@ -10,7 +10,7 @@ source:
   sha256: 0006d3b4d56d0e5d89ed346de6674633bb05a9778541f8aa7f2f2bb8fcf4faca
 
 build:
-  number: 5
+  number: 6
   run_exports:
     - {{ pin_subpackage('stopt', max_pin="x.x") }}
 
@@ -19,15 +19,15 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - cmake >=3.15
-    - libgomp  # [linux]
-    - llvm-openmp  # [osx]
-    - intel-openmp  # [win]
     - make
     - pkgconfig  # [unix]
     - ninja  # [win]
   host:
     - libboost-devel
     - libboost-mpi
+    - libgomp  # [linux]
+    - llvm-openmp  # [osx]
+    - intel-openmp  # [win]
     - {{ mpi }}
     - eigen
     - coin-or-utils
