@@ -10,7 +10,7 @@ source:
   sha256: 0006d3b4d56d0e5d89ed346de6674633bb05a9778541f8aa7f2f2bb8fcf4faca
 
 build:
-  number: 6
+  number: 7
   run_exports:
     - {{ pin_subpackage('stopt', max_pin="x.x") }}
 
