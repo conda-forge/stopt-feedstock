@@ -3,7 +3,7 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://gitlab.com/stochastic-control/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
