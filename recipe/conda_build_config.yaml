@@ -2,4 +2,4 @@ mpi:
   - mpich    # [unix]
   - msmpi    # [win64]
 libboost_devel:
-  - 1.89
+  - 1.90
