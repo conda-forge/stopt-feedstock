@@ -15,11 +15,11 @@ coin_or_utils:
 cxx_compiler:
 - vs2022
 libboost_devel:
-- '1.88'
+- '1.89'
 mpi:
 - msmpi
 mpich:
-- '4'
+- '5'
 openmpi:
 - '4'
 target_platform:
