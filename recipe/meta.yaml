@@ -10,7 +10,7 @@ source:
   sha256: 50c3ee184ab932a797a125239b5ea8fdcb271b690c82e87b28bea9a57819001c
 
 build:
-  number: 8
+  number: 9
   run_exports:
     - {{ pin_subpackage('stopt', max_pin="x.x") }}
 
@@ -36,7 +36,7 @@ requirements:
     - bzip2
     - zlib
   run:
-    - msmpi  # [win]
+    - {{ mpi }}  # [win]
     - pthreads-win32  # [win]
 
 test:
