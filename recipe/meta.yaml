@@ -36,8 +36,8 @@ requirements:
     - bzip2
     - zlib
   run:
-    - {{ mpi }}  # [win]
-    - pthreads-win32  # [win]
+    - {{ mpi }}  # [win and mpi == "msmpi"]
+    - pthreads-win32  # [win and mpi == "msmpi"]
 
 test:
   commands:
