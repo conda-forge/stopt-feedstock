@@ -14,6 +14,8 @@ coin_or_utils:
 - '2.11'
 cxx_compiler:
 - vs2022
+impi_devel:
+- 2021.16.0
 libboost_devel:
 - '1.90'
 mpi:

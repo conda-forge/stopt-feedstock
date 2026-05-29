@@ -10,7 +10,7 @@ source:
   sha256: 50c3ee184ab932a797a125239b5ea8fdcb271b690c82e87b28bea9a57819001c
 
 build:
-  number: 8
+  number: 9
   run_exports:
     - {{ pin_subpackage('stopt', max_pin="x.x") }}
 
@@ -27,8 +27,10 @@ requirements:
     - libboost-mpi
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
-    - intel-openmp  # [win]
-    - {{ mpi }}
+    - llvm-openmp  # [win and mpi == "impi"]
+    - intel-openmp  # [win and mpi == "msmpi"]
+    - {{ mpi }}  # [mpi != "impi"]
+    - impi-devel >=2021.17  # [mpi == "impi"]
     - eigen
     - coin-or-utils
     - coin-or-clp
@@ -36,8 +38,8 @@ requirements:
     - bzip2
     - zlib
   run:
-    - msmpi  # [win]
-    - pthreads-win32  # [win]
+    - msmpi  # [win and mpi == "msmpi"]
+    - pthreads-win32  # [win and mpi == "msmpi"]
 
 test:
   commands:
