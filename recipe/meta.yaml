@@ -10,7 +10,7 @@ source:
   sha256: 50c3ee184ab932a797a125239b5ea8fdcb271b690c82e87b28bea9a57819001c
 
 build:
-  number: 9
+  number: 10
   run_exports:
     - {{ pin_subpackage('stopt', max_pin="x.x") }}
 
@@ -28,7 +28,8 @@ requirements:
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
     - intel-openmp  # [win]
-    - {{ mpi }}
+    - {{ mpi }}  # [mpi != "impi"]
+    - impi-devel  # [mpi == "impi"]
     - eigen
     - coin-or-utils
     - coin-or-clp
