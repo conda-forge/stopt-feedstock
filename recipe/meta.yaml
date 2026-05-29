@@ -27,9 +27,10 @@ requirements:
     - libboost-mpi
     - libgomp  # [linux]
     - llvm-openmp  # [osx]
-    - intel-openmp  # [win]
+    - llvm-openmp  # [win and mpi == "impi"]
+    - intel-openmp  # [win and mpi == "msmpi"]
     - {{ mpi }}  # [mpi != "impi"]
-    - impi-devel>=2021.17  # [mpi == "impi"]
+    - impi-devel >=2021.17  # [mpi == "impi"]
     - eigen
     - coin-or-utils
     - coin-or-clp
