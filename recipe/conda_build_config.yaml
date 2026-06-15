@@ -2,7 +2,7 @@ mpi:
   - mpich    # [unix]
   - msmpi    # [win]
   - impi  # [win]
-libboost-devel:
+libboost_devel:
   - 1.88
   - 1.89
   - 1.90
