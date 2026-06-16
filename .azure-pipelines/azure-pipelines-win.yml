@@ -8,8 +8,8 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_libboost_devel1.89mpiimpi:
-        CONFIG: win_64_libboost_devel1.89mpiimpi
+      win_64_mpiimpi:
+        CONFIG: win_64_mpiimpi
         UPLOAD_PACKAGES: 'True'
         build_workspace_dir: D:\\bld\\
         free_disk_space: skip
@@ -17,26 +17,8 @@ jobs:
         resize_partitions: false
         store_build_artifacts: false
         tools_install_dir: D:\Miniforge
-      win_64_libboost_devel1.89mpimsmpi:
-        CONFIG: win_64_libboost_devel1.89mpimsmpi
-        UPLOAD_PACKAGES: 'True'
-        build_workspace_dir: D:\\bld\\
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: false
-        tools_install_dir: D:\Miniforge
-      win_64_libboost_devel1.90mpiimpi:
-        CONFIG: win_64_libboost_devel1.90mpiimpi
-        UPLOAD_PACKAGES: 'True'
-        build_workspace_dir: D:\\bld\\
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: false
-        tools_install_dir: D:\Miniforge
-      win_64_libboost_devel1.90mpimsmpi:
-        CONFIG: win_64_libboost_devel1.90mpimsmpi
+      win_64_mpimsmpi:
+        CONFIG: win_64_mpimsmpi
         UPLOAD_PACKAGES: 'True'
         build_workspace_dir: D:\\bld\\
         free_disk_space: skip
