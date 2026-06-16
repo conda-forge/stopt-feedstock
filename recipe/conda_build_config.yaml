@@ -4,5 +4,3 @@ mpi:
   - impi  # [win]
 libboost_devel:
   - 1.86
-  - 1.89
-  - 1.90
