@@ -17,7 +17,7 @@ cxx_compiler:
 libboost_devel:
 - '1.90'
 mpi:
-- impi
+- impi-devel
 mpich:
 - '5'
 openmpi:
