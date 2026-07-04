@@ -1,5 +1,7 @@
 {% set name = "stopt" %}
 {% set version = "7.0" %}
+{% set build = 3 %}
+{% set mpi_label = mpi|replace("-devel", "") %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +12,8 @@ source:
   sha256: 255df0597a506bfcb5b624399f2aaff2e4f1c028a15b3ed0f7800860032c195b
 
 build:
-  number: 2
+  number: {{ build }}
+  string: mpi_{{ mpi_label }}_h{{ PKG_HASH }}_{{ build }}
   run_exports:
     - {{ pin_subpackage('stopt', max_pin="x.x") }}
 
