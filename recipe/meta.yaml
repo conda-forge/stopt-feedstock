@@ -1,6 +1,6 @@
 {% set name = "stopt" %}
 {% set version = "7.0" %}
-{% set build = 3 %}
+{% set build = 4 %}
 {% set mpi_label = mpi|replace("-devel", "") %}
 
 package:
