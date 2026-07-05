@@ -2,5 +2,3 @@ mpi:
   - mpich    # [unix]
   - msmpi    # [win]
   - impi-devel  # [win]
-impi_devel:
-  - 2021.14.1  # [win]
