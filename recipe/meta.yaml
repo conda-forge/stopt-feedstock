@@ -1,6 +1,6 @@
 {% set name = "stopt" %}
 {% set version = "7.1" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set mpi_label = mpi|replace("-devel", "") %}
 
 package:
@@ -25,6 +25,7 @@ requirements:
     - make  # [unix]
     - pkgconfig  # [unix]
     - ninja  # [win]
+    - impi-devel >=2021.18.0  # [win and mpi == "impi-devel"]
   host:
     - libboost-devel
     - libboost-mpi
@@ -32,7 +33,9 @@ requirements:
     - llvm-openmp  # [osx]
     - llvm-openmp  # [win and mpi != "msmpi"]
     - intel-openmp  # [win and mpi == "msmpi"]
-    - {{ mpi }}
+    - {{ mpi }}  # [not win]
+    - impi-devel >=2021.18.0  # [win and mpi == "impi-devel"]
+    - msmpi  # [win and mpi == "msmpi"]
     - eigen
     - coin-or-utils
     - coin-or-clp
