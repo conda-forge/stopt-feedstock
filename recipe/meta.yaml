@@ -25,7 +25,7 @@ requirements:
     - make  # [unix]
     - pkgconfig  # [unix]
     - ninja  # [win]
-    - impi-devel >= 2021.18.0  # [win and mpi == "impi-devel"]
+    - impi-devel >=2021.18.0  # [win and mpi == "impi-devel"]
   host:
     - libboost-devel
     - libboost-mpi
@@ -34,7 +34,7 @@ requirements:
     - llvm-openmp  # [win and mpi != "msmpi"]
     - intel-openmp  # [win and mpi == "msmpi"]
     - {{ mpi }}  # [not win]
-    - impi-devel >= 2021.18.0  # [win and mpi == "impi-devel"]
+    - impi-devel >=2021.18.0  # [win and mpi == "impi-devel"]
     - msmpi  # [win and mpi == "msmpi"]
     - eigen
     - coin-or-utils
