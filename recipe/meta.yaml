@@ -1,6 +1,6 @@
 {% set name = "stopt" %}
-{% set version = "7.0" %}
-{% set build = 4 %}
+{% set version = "7.1" %}
+{% set build = 1 %}
 {% set mpi_label = mpi|replace("-devel", "") %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://gitlab.com/stochastic-control/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 255df0597a506bfcb5b624399f2aaff2e4f1c028a15b3ed0f7800860032c195b
+  sha256: 8a9f585a4f043930b97eba8e2b9715b5ac83c5f14d90550314787bfecc44675a
 
 build:
   number: {{ build }}
