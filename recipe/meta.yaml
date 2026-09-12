@@ -25,6 +25,7 @@ requirements:
     - make  # [unix]
     - pkgconfig  # [unix]
     - ninja  # [win]
+    - impi-devel  # [win and mpi == "impi-devel"]
   host:
     - libboost-devel
     - libboost-mpi
