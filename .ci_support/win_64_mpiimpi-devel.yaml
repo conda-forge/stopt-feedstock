@@ -23,7 +23,7 @@ mpi:
 mpich:
 - '5'
 openmpi:
-- '4'
+- '5'
 target_platform:
 - win-64
 zlib:
