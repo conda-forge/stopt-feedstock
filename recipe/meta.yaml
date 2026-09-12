@@ -32,7 +32,9 @@ requirements:
     - llvm-openmp  # [osx]
     - llvm-openmp  # [win and mpi != "msmpi"]
     - intel-openmp  # [win and mpi == "msmpi"]
-    - {{ mpi }}
+    - {{ mpi }}  # [not win]
+    - impi-devel  # [win and mpi == "impi-devel"]
+    - msmpi  # [win and mpi == "msmpi"]
     - eigen
     - coin-or-utils
     - coin-or-clp
